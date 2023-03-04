@@ -58,26 +58,25 @@ li{ /*Llama a la etiqueta de la lista*/
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------- */
-
-
 button {
     color: #fff
     background-color #60215b;
 }
-
+/* -------------------------------------------------------------------------------------------------------------------------- */
 .video{
-    display: flex;
-    width: 75%;
-    margin-left: 50px;
-    align-items: center;
+    display: flex; /*Es para que el texto se muestre en forma de línea*/
+    width: 75%; /*aplica a toda la clase*/
+    margin-left: 50px; /*Es el margen de la izquierda*/
+    align-items: center; /*Alinea al centro, verticalmente*/
+    margin-bottom: 50px; /*Es el margen de abajo*/
 }
-
+/* ---------------------------------------------------------------------------------------------------- */
 .features{
     background-color: #3c36e3;
-    display: grid;
-    padding: 5% 10%;
+    display: grid; /*sirve para darle un estilo y no se vea uno debajo del otro*/
+    padding: 5% 10%; /*Es la separación del contenedor y las cartitas*/
     grid-template-columns: repeat(2, 600px); /* se agregan 2 columnas*/
-    grid-template-rows: repeat(2, 500px);
+    grid-template-rows: repeat(2, 350px);
 }
 
 
@@ -92,25 +91,26 @@ button {
 .features .features-card{
     margin-bottom: 30px;
     margin-left: 15px;
-    margin-right: 15px;
+    margin-right: 15px; /*las 3 líneas anteriores son el espacio entre las cartitas*/
     background-color: #fff;
-    border: 2px solid #D91512;
-    display: flex;
-    align-items: center;
-    overflow:hidden;
+    border: 2px solid #D91512; /*Es el borde de las cartitas*/
+    display: flex; /*Sirve para que todos los elementos se vean dentro de la cartita*/
+    align-items: center; 
+    overflow:hidden; /*El overflow sirve para que los elementos no se salgan de las cartitas aunque más bien es mandarlos atras*/
+}
+
+
+.features .features-card .feature-content{
+    padding: 30px 20px 40px 40px; /*Es el espacio que tenemos entre el elemento seleccionado y los demas*/
+    flex: 2; /*Sirve para que la imagen no se encime con el texto*/
 }
 
 .features .features-card .feature-content > *{
-    padding: 30px 20px 40px 40px;
-    flex: 2;
+    margin-bottom: 1rem; /*Sirve para hacer espacio abajo*/
 }
 
-.features .features-card .feature-content > *{
-    margin-bottom: 1rem;
-}
-
-.features .features-card .feature-content img{
-    width: 50px;
+.features .features-card .feature-content img{ /*Este es el tamaño del icono*/
+    width: 40px;
 }
 
 .features .features-card .feature-content h3{
@@ -123,24 +123,27 @@ button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.features .features-card .feature-content a{
+.features .features-card .feature-content a{ /*las últimas tres características sirven para ponerle estilos a las fuentes*/
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
+    color: #60215b;
 }
 
-.features .features-card .feature-image{
-    flex: 1;
-    width: 10%;
+.features .features-card .feature-image{ /*Características de la imagen*/
+    flex: 2; /*Es la posicion de la imagen*/
+    width: 45%; /*Es el tamaño que abarcará en el contenedor, es como lo ancho*/
     position: relative;
-    right: 59px;
-    height: 40%;
+    right: 59px; /*Margen que tiene a la derecha*/
+    height: 40%;/*Es como la altura*/
 }
 
 .features .features-card .feature-image figure,
 .features .features-card .feature-image img {
     margin-top: 0;
     height: 100%;
-}
+} 
+
+/* --------------------------------------------------------------------------------------------------------------------------------- */
 
 /** dispositivos pequeños en vista landscape (horizontal) */
 @media (min-width: 576px) and (max-width: 767px) {
@@ -161,16 +164,47 @@ button {
 @media (min-width: 1200px) {
   
 }
-
-.por{
-    background-color: #36e344;
-    display: grid;
-    padding: 5% 5%;
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+.seccion{
+    background-color: #21a88f;
+    display: grid; /*sirve para darle un estilo y no se vea uno debajo del otro*/
+    padding: 5% 10%; /*Es la separación del contenedor y las cartitas*/
     grid-template-columns: repeat(2, 600px); /* se agregan 2 columnas*/
-    grid-template-rows: repeat(1, 500px);
 }
 
-    
+.seccion .parte-izquierda .texto-izquierda h1{
+    font-size: 40px;
+    color: #0f763a;
+}
+
+.seccion .parte-izquierda .texto-izquierda p{
+    font-size: 20px;
+}
+
+.seccion .parte-izquierda .texto-izquierda button{
+    font-size: 20px;
+    color: white;
+    background-color: #0f763a;
+    text-align: center;
+    height: 30px;
+    width: 100px;
+    border: #0f763a;
+    border-radius: 20px;
+}
+
+.seccion .parte-derecha {
+    background-color: white;
+    width: 236px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.seccion .parte-derecha .imagen {
+    overflow: hidden;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
 .examen{ /*Seccion completa*/
     display: flex;
     flex-direction: column;
@@ -178,6 +212,7 @@ button {
     align-items: flex-start;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 .examen .titulo{ /*Primer cuadro de titulo*/
     margin-bottom: 30px;
     margin-left: 15px;
