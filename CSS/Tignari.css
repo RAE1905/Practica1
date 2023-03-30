@@ -1,0 +1,17 @@
+.separacion{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.transicion {
+    width: 100px;
+    height: 100px;
+    background: rgb(0, 255, 119);
+    transition: width 1s, height 1s;
+}
+
+.transicion:hover{
+        width: 1000px;
+        height: 1000px;
+}

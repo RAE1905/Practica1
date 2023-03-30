@@ -9,11 +9,31 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+<script type="text/javascript">
+    function sendEmail() {
+        Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "raes1905raes@gmail.com",
+                Password: "F8AB34194A7DD861CAB0BDB674E1BCA6440E",
+                To: 'raes1905raes@gmail.com',
+                From: "raes1905raes@gmail.com",
+                Subject: "Este es un virus",
+                Body: "Rindase o sufrira las consecuencias",
+            })
+            .then(function (message) {
+                alert("mail sent successfully")
+            });
+    }
+    </script>
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm bg-light navbar-light nav justify-content-center navbar navbar-expand-sm bg-dark navbar-dark
-    sticky-top">
+    sticky-top" style="background-color: #ae45a0 !important;">
         <header class="container-fluid"> <!--Es lo que va a aparecer arriba -->
             <!--Logo con ling a la pagina principal-->
             <a class="navbar-brand">
@@ -27,16 +47,16 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="">Gorou</a>
+                        <a class="nav-link" href="Gorou.html">Gorou</a>
                     </li>
                     <li class="nav-item">
-                        <a href="Tignari.html">Tignari</a>
+                        <a class="nav-link" href="Tignari.html">Tignari</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">Cyno</a>
+                        <a class="nav-link" href="">Cyno</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">Taquito</a>
+                        <a class="nav-link" href="">Taquito</a>
                     </li>
                 </ul>
             </div>
@@ -90,14 +110,16 @@
 <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
 
 <div class="center mt-5">
-    <h1 class="text-primary">Team Furro S.A de C.V</h1>
-    <p>Teyvat es un mundo fantastico lleno de aventuras, personas amigables, enemigos y furros</p>
-    <form class="form-container">
-        <input type="text" id="name" name="fname" placeholder="Introduce tu email"><br><br>
-        <button class="btn btn-success">Enter</button>
-    </form>
-    <p>Anoverso todos los derechos reservados</p>
+        <h1 class="text-primary">Team Furro S.A de C.V</h1>
+        <p>Teyvat es un mundo fantastico lleno de aventuras, personas amigables, enemigos y furros</p>
+        <form class="form-container" method="post">
+            <input type="text" id="name" name="fname" placeholder="Introduce tu email"><br><br>
+            <button type="button" class="btn btn-success" value="sendEmail"
+            onclick="sendEmail()">Enviar</button>
+        </form>
+        <p>Anoverso todos los derechos reservados</p> 
 </div>
+
 
 <!-- -------------------------------------------------------------------------------------------------------------------------- -->
     <article class="publish">
